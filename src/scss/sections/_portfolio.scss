@@ -1,0 +1,9 @@
+.portfolio {
+  @include padding-height(70);
+  background: $black;
+
+  &__container {
+    display: grid;
+    gap: rem(30);
+  }
+}

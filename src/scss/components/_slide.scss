@@ -1,0 +1,79 @@
+.slide {
+  @include margin-centered;
+  height: 250px;
+  max-width: 900px;
+  overflow: hidden;
+  border-radius: rem(10);
+
+  @include breakpoint(medium) {
+    height: 500px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0  ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(15);
+    width: 100%;
+    height: 250px;
+    background: transparentize($black, .2);
+    transition: .3s;
+    opacity: 0;
+
+    @include breakpoint(medium) {
+      height: 500px;
+    }
+
+    .slide__item:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__title, &__button {
+    transition: .3s;
+
+    .slide__item:hover & {
+      transform: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+    font-size: rem(18);
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50px);
+
+    @include breakpoint(medium) {
+      font-size: rem(36);
+    }
+  }
+
+  &__button {
+    @include padding-height(10);
+    width: 130px;
+    font-size: rem(12);
+    font-weight: 600;
+    transform: translateX(50px);
+
+    @include breakpoint(medium) {
+      @include padding-height(16);
+      width: 180px;
+      font-size: rem(16);
+      font-weight: 500;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+}

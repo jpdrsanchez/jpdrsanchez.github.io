@@ -1,0 +1,40 @@
+// ===========================================================
+// Style - FrontEnd Boilerplate
+//
+// 1. Abstract
+// 2. Base
+// 3. Sections
+// 4. Components
+//
+// ===========================================================
+
+// -----------------------------------------------------------
+// 1. Abstract
+// -----------------------------------------------------------
+@import 'abstract//utilities';
+@import 'abstract//abstract.scss';
+
+// -----------------------------------------------------------
+// 2. Base
+// -----------------------------------------------------------
+@import 'base//reset';
+@import 'base/global';
+
+// -----------------------------------------------------------
+// 3. Sections
+// -----------------------------------------------------------
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/services';
+@import 'sections/portfolio';
+@import 'sections/quote';
+@import 'sections/about';
+@import 'sections/contact';
+@import 'sections/footer';
+
+// -----------------------------------------------------------
+// 4. Sections
+// -----------------------------------------------------------
+@import 'components/menu';
+@import 'components/mobile';
+@import 'components/slide';

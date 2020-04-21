@@ -1,0 +1,33 @@
+.contact {
+  @include padding-height(70);
+
+  &__container {
+    display: grid;
+    gap: rem(30);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__description {
+    grid-column: 1 / -1;
+  }
+
+  &__item {
+    @include margin-centered;
+    max-width: 375px;
+
+    @include breakpoint(medium) {
+      @include margin-width(0)
+    }
+  }
+}

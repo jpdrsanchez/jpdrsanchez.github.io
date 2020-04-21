@@ -1,0 +1,208 @@
+// ===========================================================
+// Global - FrontEnd Boilerplate
+//
+// 1. Elements
+// 2. Grid
+// 3. Components
+// 4. Text
+// 5. Others
+// ===========================================================
+
+// -----------------------------------------------------------
+// 1. Elements
+// -----------------------------------------------------------
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  color: $black;
+  font-family: $text-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+// -----------------------------------------------------------
+// 2. Grid
+// -----------------------------------------------------------
+
+.container {
+  position: relative;
+  max-width: 100%;
+  @include margin-centered;
+  @include padding-width($gutter);
+
+  @include breakpoint(small) {
+    max-width: rem(520);
+  }
+
+  @include breakpoint(medium) {
+    max-width: rem(740);
+  }
+
+  @include breakpoint(large) {
+    max-width: rem(960);
+  }
+
+  @include breakpoint(x-large) {
+    max-width: rem(1140);
+  }
+}
+
+// -----------------------------------------------------------
+// 3. Components
+// -----------------------------------------------------------
+
+.button {
+  @include padding-height(16);
+  display: block;
+  width: 180px;
+  border: rem(2) solid $white;
+  color: $white;
+  font-weight: 500;
+  letter-spacing: .1em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+    column-gap: rem(30);
+    row-gap: rem(15);
+    width: 100%;
+
+    @include breakpoint(small) {
+      grid-template-columns: 180px 180px;
+    }
+  }
+}
+
+.title {
+  font-family: $title-font;
+  font-size: rem(48);
+  font-weight: 600;
+  letter-spacing: .15em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    display: block;
+    margin: rem(15) auto 0 auto;
+    height: 5px;
+    width: 50px;
+    background: $red;
+  }
+}
+
+.subtitle {
+  font-family: $text-font;
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+
+  @include breakpoint(large) {
+    font-size: rem(20);
+    font-weight: 500;
+  }
+
+  @include breakpoint(x-large) {
+    font-size: rem(24);
+  }
+  &--decoration--underline {
+    &::after {
+      content: '';
+      display: block;
+      margin: rem(8) auto rem(15) auto;
+      height: 2px;
+      width: 35px;
+      background: $red;
+
+      @include breakpoint(medium) {
+        @include margin-width(0);
+        margin-top: rem(4);
+      }
+    }
+  }
+
+  &__icon {
+    margin-left: rem(3);
+    @include breakpoint(medium) {
+      margin-left: rem(5);
+    }
+  }
+}
+
+.section-description {
+  font-size: rem(14);
+  font-weight: 500;
+  letter-spacing: .05em;
+  line-height: 1.6;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    font-size: rem(16);
+  }
+}
+
+.text {
+  font-size: rem(14);
+  line-height: 1.8;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+}
+
+// -----------------------------------------------------------
+// 4. Text
+// -----------------------------------------------------------
+
+.black {
+  color: $black;
+}
+
+.red {
+  color: $red;
+}
+
+.white {
+  color: $white;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+// -----------------------------------------------------------
+// 5. Others
+// -----------------------------------------------------------
+
+.no-scroll {
+  overflow: hidden;
+}

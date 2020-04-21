@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <script>document.documentElement.className += ' js'</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanchez | Desenvolvimento Web</title>
+
+  <!-- Font Awesome -->
+  <script src="http://kit.fontawesome.com/9498408c94.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Barlow+Condensed:wght@400;500;600&family=Josefin+Sans:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Css File -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav container">
+      <a class="header__logo" href="#">sanchez</a>
+      <a class="mobile" href="#">
+        <div class="mobile__icon"></div>
+      </a>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#services">serviços</a></li>
+        <li class="menu__item"><a class="menu__link" href="#portfolio">portfólio</a></li>
+        <li class="menu__item"><a class="menu__link" href="#about">sobre</a></li>
+        <li class="menu__item"><a class="menu__link" href="#contact">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="hero js-scroll" id="hero">
+    <h1 class="hero__title">Desenvolvimento <span class="red">Web</span></h1>
+    <div class="button__wrapper">
+      <a class="button" href="#portfolio">Portfólio</a>
+      <a class="button" href="#">Currículo</a>
+    </div>
+  </main>
+
+  <section class="services" id="services">
+    <div class="services__container container">
+      <h1 class="title services__title">Serviços</h1>
+      <div class="services__item">
+        <h2 class="subtitle subtitle--decoration--underline services__subtitle">
+          Criação de sites
+          <i class="fas fa-laptop red subtitle__icon"></i>
+        </h2>
+        <p class="text">
+          Desenvolvimento completo do website institucional para sua empresa.
+        </p>
+      </div>
+      <div class="services__item">
+        <h2 class="subtitle subtitle--decoration--underline services__subtitle">
+          Sites responsivos
+          <i class="fas fa-mobile-alt red subtitle__icon"></i>
+        </h2>
+        <p class="text">
+          Seu site completamente adáptavel à todos os dispositivos móveis e tablets.
+        </p>
+      </div>
+      <div class="services__item">
+        <h2 class="subtitle subtitle--decoration--underline services__subtitle">
+          Sites gerenciáveis
+          <i class="far fa-edit red subtitle__icon"></i>
+        </h2>
+        <p class="text">
+          Seu site completamente gerenciável por meio da plataforma wordpress.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio js-scroll" id="portfolio">
+    <div class="portfolio__container container">
+      <h1 class="title white">Portfólio</h1>
+      <p class="section-description white">
+        Confira meus projetos realizados e as tecnologias utilizadas em cada um deles.
+      </p>
+
+      <div class="slide">
+        <ul class="slide__content">
+          <li class="slide__item">
+            <img src="./img/slide/bikcraft-screencapture.png" alt="Bikcraft">
+            <div class="slide__overlay">
+              <h2 class="white slide__title">Bikcraft</h2>
+              <a class="button slide__button" href="#">Detalhes</a>
+              <a class="button slide__button" href="#">Acessar</a>
+              <a class="button slide__button" href="#">Github</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <blockquote class="quote__container container">
+    <p class="quote__text">
+      “A alegria que se tem em pensar e aprender faz-nos pensar e aprender ainda mais.”
+    </p>
+    <cite class="quote__author">Aristóteles</cite>
+    </blockquote>
+  </section>
+
+  <section class="about js-scroll" id="about">
+    <div class="about__container container">
+      <h1 class="title white about__title">Sobre</h1>
+      <img class="about__image" src="img/about-photo.jpg" alt="João Pedro e sua eposa Jaqueline">
+      <div class="about__content-wrapper">
+        <h2 class="subtitle white about__subtitle">Sobre mim</h2>
+        <p class="about__text white">
+          Me chamo João Pedro, tenho 22 anos, sou apaixonado por técnologia e atualmente estou cursando Análise e Desenvolvimento de Sistemas.
+        </p>
+        <p class="about__text white">
+          Tenho por objetivo poder atuar com Desenvolvimento Web, pois é a área que tenho estudado para poder me desenvolver mais e mais.
+        </p>
+        <h2 class="subtitle white about__subtitle">Estudos e conhecimentos</h2>
+        <ul class="about__list">
+          <li class="about__text white"><span class="bold">Front-end:</span> HTML5, CSS3, SASS & Javascript (ES6+).</li>
+          <li class="about__text white"><span class="bold">Back-end:</span> PHP & Wordpress.</li>
+          <li class="about__text white"><span class="bold">Task Runners:</span> Gulp.</li>
+          <li class="about__text white"><span class="bold">UI:</span> Figma & Adobe XD.</li>
+        </ul>
+        <ul class="about__list">
+          <li class="about__icon white"><i class="fab fa-linkedin"></i></li>
+          <li class="about__icon white"><i class="fab fa-github-square"></i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact js-scroll" id="contact">
+    <div class="contact__container container">
+      <h1 class="title contact__title">Contato</h1>
+      <p class="section-description contact__description">
+        Gostou do que viu? Será ótimo realizar a criação do seu site.
+      </p>
+      <div class="contact__item">
+        <h2 class="subtitle subtitle--decoration--underline contact__subtitle">
+          Email
+          <i class="far fa-envelope red"></i>
+        </h2>
+        <p class="text">
+          joaopedrosanchez302@gmail.com
+        </p>
+      </div>
+      <div class="contact__item">
+        <h2 class="subtitle subtitle--decoration--underline contact__subtitle">
+          Telefones
+          <i class="fas fa-phone-alt red"></i>
+        </h2>
+        <p class="text">
+          +55 (11)944694216
+        </p>
+      </div>
+      <div class="contact__item">
+        <h2 class="subtitle subtitle--decoration--underline contact__subtitle">
+          Linkedin
+          <i class="fab fa-linkedin red"></i>
+        </h2>
+        <p class="text">
+          linkedin.com/in/jpdrsanchez/
+        </p>
+      </div>
+      <div class="contact__item">
+        <h2 class="subtitle subtitle--decoration--underline contact__subtitle">
+          Github
+          <i class="fab fa-github-square red"></i>
+        </h2>
+        <p class="text">
+          github.com/jpdrsanchez
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container container">
+      <p class="footer__text">Copyright © 2020 - João Pedro Sanchez</p>
+      <a class="footer__link" href="#hero">
+        <i class="fas fa-angle-up fa-2x"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="./dist/js/main.js"></script>
+</body>
+</html>
