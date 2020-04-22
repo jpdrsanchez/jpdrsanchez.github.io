@@ -28,6 +28,10 @@
     &:last-child {
       margin-right: 0;
     }
+
+    .menu-mobile & {
+      animation: show-items .3s forwards;
+    }
   }
 
   &__link {
@@ -57,10 +61,17 @@
 @keyframes show {
   from {
     opacity: 0;
-    transform: translateY(-100px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+@keyframes show-items {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
