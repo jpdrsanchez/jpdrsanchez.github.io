@@ -5,7 +5,7 @@ function initAnimate() {
     jsAnimate.forEach((item) => {
       setTimeout(() => {
         item.classList.add('active');
-      }, 10000);
+      }, 1000);
     });
   }
 

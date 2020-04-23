@@ -49,7 +49,7 @@ function initSlide() {
         counterSlide = 0;
       }
       slideNavClick(counterSlide);
-    }, 5000);
+    }, 3000);
   }
 
   slideItem.forEach(item => {
