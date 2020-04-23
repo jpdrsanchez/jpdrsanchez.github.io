@@ -1,9 +1,13 @@
 .quote {
   @include padding-height(70);
-  background: url('../../img/quote-bg.jpg') no-repeat center;
+  background: url('../img/quote-bg-mobile.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+
+  @include breakpoint(medium) {
+    background-image: url('../img/quote-bg.jpg');
+  }
 
   &__text {
     margin-bottom: rem(30);

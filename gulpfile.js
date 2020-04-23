@@ -28,12 +28,16 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
+// Image Modules
+const imagemin = require('gulp-imagemin');
+
 // -----------------------------------------------------------
 // 2. File Paths
 // -----------------------------------------------------------
 const files = {
   scssPath: './src/scss/**/*.scss',
-  jsPath: './src/js/**/*.js'
+  jsPath: './src/js/**/*.js',
+  imgPath: './src/img/**/*'
 }
 
 // -----------------------------------------------------------
@@ -47,7 +51,7 @@ function scss() {
       cmq(),
       cssnano() 
     ]))
-    .pipe(dest('./dist/css', { sourcemaps: true }))
+    .pipe(dest('./dist/css', { sourcemaps: '.' }))
 }
 
 function js() {
@@ -57,11 +61,29 @@ function js() {
       presets: ['@babel/env']
     }))
     .pipe(uglify())
-    .pipe(dest('./dist/js', { sourcemaps: true }))
+    .pipe(dest('./dist/js', { sourcemaps: '.' }))
+}
+
+function image(){
+  return src(files.imgPath)
+      .pipe(imagemin([
+              imagemin.gifsicle({interlaced: true}),
+              imagemin.mozjpeg({quality: 75, progressive: true}),
+              imagemin.optipng({optimizationLevel: 5}),
+              imagemin.svgo({
+                  plugins: [
+                      {removeViewBox: true},
+                      {cleanupIDs: false}
+                  ]
+              })
+          ], 
+          { verbose: true }
+      ))
+      .pipe(dest('./dist/img'));
 }
 
 function watchTask() {
-  watch([files.scssPath, files.jsPath], parallel(scss, js));  
+  watch([files.scssPath, files.jsPath, files.imgPath], parallel(scss, js, imagemin));  
 }
 
 // -----------------------------------------------------------
@@ -69,5 +91,6 @@ function watchTask() {
 // -----------------------------------------------------------
 exports.scss = scss;
 exports.js = js;
+exports.image = image;
 exports.watch = watchTask;
-exports.default = parallel(scss, js, watchTask);
+exports.default = parallel(scss, js, image, watchTask);

@@ -8,8 +8,12 @@
   height: 100%;
   min-height: 500px;
   max-width: 100%;
-  background: url('../../../img/main-bg.jpg') no-repeat center;
+  background: url('../img/main-bg-mobile.jpg') no-repeat center;
   background-size: cover;
+
+  @include breakpoint(medium) {
+    background-image: url('../img/main-bg.jpg');
+  }
 
   &__title {
     margin-bottom: rem(60);
