@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanchez | Desenvolvimento Web</title>
 
-  <!-- Font Awesome -->
-  <script src="http://kit.fontawesome.com/9498408c94.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Barlow+Condensed:wght@400;500;600&family=Josefin+Sans:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./dist/css/all.min.css">
 
   <!-- Css File -->
   <link rel="stylesheet" href="./dist/css/style.css">
@@ -31,15 +32,15 @@
     </nav>
   </header>
   
-  <main class="hero js-scroll" id="hero">
-    <h1 class="hero__title">Desenvolvimento <span class="red">Web</span></h1>
+  <main class="hero" id="hero">
+    <h1 class="hero__title js-animate top">Desenvolvimento <span class="red">Web</span></h1>
     <div class="button__wrapper">
-      <a class="button" href="#portfolio">Portfólio</a>
-      <a class="button" href="#">Currículo</a>
+      <a class="button js-animate left" href="#portfolio">Portfólio</a>
+      <a class="button js-animate right" href="#">Currículo</a>
     </div>
   </main>
 
-  <section class="services" id="services">
+  <section class="services js-scroll" id="services">
     <div class="services__container container">
       <h1 class="title services__title">Serviços</h1>
       <div class="services__item">
@@ -82,16 +83,90 @@
       <div class="slide">
         <ul class="slide__content">
           <li class="slide__item">
+            <img src="./img/slide/jpdrsanchez-screencapture.png" alt="Sanchez">
+            <div class="slide__overlay">
+              <h2 class="white slide__title">Sanchez | Web Dev</h2>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Detalhes
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Acessar
+                <i class="fas fa-laptop"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Github
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </li>
+          <li class="slide__item">
             <img src="./img/slide/bikcraft-screencapture.png" alt="Bikcraft">
             <div class="slide__overlay">
               <h2 class="white slide__title">Bikcraft</h2>
-              <a class="button slide__button" href="#">Detalhes</a>
-              <a class="button slide__button" href="#">Acessar</a>
-              <a class="button slide__button" href="#">Github</a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Detalhes
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Acessar
+                <i class="fas fa-laptop"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Github
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </li>
+          <li class="slide__item">
+            <img src="./img/slide/surfbot-screencapture.png" alt="Surfbot">
+            <div class="slide__overlay">
+              <h2 class="white slide__title">Surfbot</h2>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Detalhes
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Acessar
+                <i class="fas fa-laptop"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Github
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </li>
+          <li class="slide__item">
+            <img src="./img/slide/flexblog-screencapture.png" alt="Flexblog">
+            <div class="slide__overlay">
+              <h2 class="white slide__title">Flexblog</h2>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Detalhes
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Acessar
+                <i class="fas fa-laptop"></i>
+              </a>
+              <a class="button button--icon slide__button" href="#" target="_blank">
+                Github
+                <i class="fab fa-github"></i>
+              </a>
             </div>
           </li>
         </ul>
       </div>
+      <nav class="slide-nav">
+        <a class="slide-nav__link" href="#">jpdrsanchez</a>
+        <a class="slide-nav__link" href="#">bikcraft</a>
+        <a class="slide-nav__link" href="#">surfbot</a>
+        <a class="slide-nav__link" href="#">flexblog</a>
+      </nav>
+      <!-- Será implementado em breve
+        <nav class="slide-arrows">
+        <a class="slide-arrows__link left white" href="#"><i class="far fa-arrow-alt-circle-left"></i></a>
+        <a class="slide-arrows__link right white" href="#"><i class="far fa-arrow-alt-circle-right"></i></a>
+      </nav> -->
     </div>
   </section>
 

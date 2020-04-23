@@ -49,6 +49,10 @@
       font-size: rem(14);
     }
 
+    &.active {
+      color: $red;
+    }
+
     .menu__item:last-child & {
       @include breakpoint(medium) {
         padding-right: 0;

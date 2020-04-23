@@ -81,6 +81,12 @@ img {
   text-align: center;
   text-transform: uppercase;
 
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
   &__wrapper {
     display: grid;
     justify-content: center;
@@ -115,19 +121,19 @@ img {
 
 .subtitle {
   font-family: $text-font;
-  font-size: rem(16);
+  font-size: rem(18);
   font-weight: 600;
   line-height: 1.33;
   text-align: center;
   text-transform: uppercase;
 
-  @include breakpoint(medium) {
-    text-align: left;
+  @include breakpoint (medium) {
+    font-size: rem(22);
   }
 
   @include breakpoint(large) {
-    font-size: rem(20);
-    font-weight: 500;
+    font-weight: 600;
+    text-align: left;
   }
 
   @include breakpoint(x-large) {
@@ -142,7 +148,7 @@ img {
       width: 35px;
       background: $red;
 
-      @include breakpoint(medium) {
+      @include breakpoint(large) {
         @include margin-width(0);
         margin-top: rem(4);
       }
@@ -174,7 +180,7 @@ img {
   line-height: 1.8;
   text-align: center;
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     text-align: left;
   }
 }
@@ -202,6 +208,42 @@ img {
 // -----------------------------------------------------------
 // 5. Others
 // -----------------------------------------------------------
+.js-scroll {
+  .js & {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: .5s;
+
+    &.active {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+.js-animate {
+  .js & {
+    opacity: 0;
+    transition: .5s;
+
+    &.top {
+      transform: translateY(-50px);
+    }
+
+    &.left {
+      transform: translateX(-100px);
+    }
+
+    &.right {
+      transform: translateX(100px);
+    }
+
+    &.active {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
 
 .no-scroll {
   overflow: hidden;
