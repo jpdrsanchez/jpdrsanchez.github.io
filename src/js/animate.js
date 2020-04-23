@@ -8,8 +8,7 @@ function initAnimate() {
       }, 1000);
     });
   }
-
-  window.addEventListener('load', animate);
+  animate();
 }
 
 initAnimate();
