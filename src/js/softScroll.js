@@ -5,7 +5,7 @@ function initSoftScroll() {
   function softScroll() {
     jsScroll.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
-      const halfWindow = window.innerHeight * 0.55;
+      const halfWindow = window.innerHeight * 0.6;
       if (sectionTop - halfWindow < 0) {
         section.classList.add('active');
       }

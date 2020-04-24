@@ -83,7 +83,8 @@ function image(){
 }
 
 function watchTask() {
-  watch([files.scssPath, files.jsPath, files.imgPath], parallel(scss, js, imagemin));  
+  watch([files.scssPath, files.jsPath], parallel(scss, js)); 
+  watch([files.imgPath], parallel(image));
 }
 
 // -----------------------------------------------------------
