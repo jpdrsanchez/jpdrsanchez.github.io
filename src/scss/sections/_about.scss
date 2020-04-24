@@ -47,14 +47,4 @@
       text-align: left;
     }
   }
-
-  &__list:last-of-type {
-    display: flex;
-    justify-content: center;
-    margin-top: rem(30);
-
-    @include breakpoint(medium) {
-      justify-content: flex-start;
-    }
-  }
 }
