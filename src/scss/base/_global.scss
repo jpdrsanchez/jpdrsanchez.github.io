@@ -221,30 +221,6 @@ img {
   }
 }
 
-.js-animate {
-  .js & {
-    opacity: 0;
-    transition: .5s;
-
-    &.top {
-      transform: translateY(-50px);
-    }
-
-    &.left {
-      transform: translateX(-100px);
-    }
-
-    &.right {
-      transform: translateX(100px);
-    }
-
-    &.active {
-      opacity: 1;
-      transform: none;
-    }
-  }
-}
-
 .no-scroll {
   overflow: hidden;
 }

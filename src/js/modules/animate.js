@@ -1,4 +1,4 @@
-function initAnimate() {
+export default function initAnimate() {
   const jsAnimate = document.querySelectorAll('.js-animate');
 
   function animate() {
@@ -10,5 +10,3 @@ function initAnimate() {
   }
   animate();
 }
-
-initAnimate();
