@@ -1,4 +1,4 @@
-function initMenuScroll() {
+export default function initMenuScroll() {
   const internalLinks = document.querySelectorAll('a[href^="#"]');
 
   function scrollLink() {
@@ -17,5 +17,3 @@ function initMenuScroll() {
     link.addEventListener('click', scrollLink);
   });
 }
-
-initMenuScroll();

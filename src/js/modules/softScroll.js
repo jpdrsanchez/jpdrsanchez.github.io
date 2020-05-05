@@ -1,4 +1,4 @@
-function initSoftScroll() {
+export default function initSoftScroll() {
 
   const jsScroll = document.querySelectorAll('.js-scroll');
 

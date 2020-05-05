@@ -1,4 +1,4 @@
-function initMobileMenu() {
+export default function initMobileMenu() {
   const mobile = document.querySelector('.mobile');
   const menu = document.querySelector('.menu');
 
@@ -27,5 +27,3 @@ function initMobileMenu() {
   menu.addEventListener('click', closeMobileMenu);
   window.addEventListener('resize', closeMobileMenu);
 }
-
-initMobileMenu();

@@ -1,4 +1,4 @@
-function preventDefaultLinks() {
+export default function preventDefaultLinks() {
 
   const internalLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -8,5 +8,3 @@ function preventDefaultLinks() {
     });
   })
 }
-
-preventDefaultLinks();
