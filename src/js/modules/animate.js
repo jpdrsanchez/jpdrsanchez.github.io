@@ -19,6 +19,7 @@ export default function initAnimations() {
       animeItems();
     }
   }
-
+  
+  animeItems();
   document.addEventListener('visibilitychange', visibility);
 }
