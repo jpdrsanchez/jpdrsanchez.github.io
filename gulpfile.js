@@ -27,6 +27,7 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const webpack = require('webpack-stream');
 
 // Image Modules
 const imagemin = require('gulp-imagemin');
@@ -56,11 +57,7 @@ function scss() {
 
 function js() {
   return src(files.jsPath, { sourcemaps: true })
-    .pipe(concat('main.js'))
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
+    .pipe(webpack( require('./webpack.config.js')))
     .pipe(dest('./dist/js', { sourcemaps: '.' }))
 }
 
@@ -68,7 +65,7 @@ function image(){
   return src(files.imgPath)
       .pipe(imagemin([
               imagemin.gifsicle({interlaced: true}),
-              imagemin.mozjpeg({quality: 75, progressive: true}),
+              imagemin.mozjpeg({quality: 85, progressive: true}),
               imagemin.optipng({optimizationLevel: 5}),
               imagemin.svgo({
                   plugins: [

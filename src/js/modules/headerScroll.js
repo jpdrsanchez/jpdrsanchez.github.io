@@ -1,4 +1,4 @@
-function initHeaderScroll() {
+export default function initHeaderScroll() {
   const header = document.querySelector('.header');
 
   function handleScroll(event) {
@@ -11,5 +11,3 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', handleScroll);
 }
-
-initHeaderScroll();

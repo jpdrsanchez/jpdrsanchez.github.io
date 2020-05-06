@@ -1,6 +1,6 @@
-function initSoftScroll() {
+export default function initSoftScroll() {
 
-  const jsScroll = document.querySelectorAll('.js-scroll');
+  const jsScroll = document.querySelectorAll('[data-anime="scroll"]');
 
   function softScroll() {
     jsScroll.forEach((section) => {
@@ -16,5 +16,3 @@ function initSoftScroll() {
 
   window.addEventListener('scroll', softScroll);
 }
-
-initSoftScroll();

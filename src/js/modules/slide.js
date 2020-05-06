@@ -1,4 +1,4 @@
-function initSlide() {
+export default function initSlide() {
   const slideItem = document.querySelectorAll('.slide__item');
   const slideNav = document.querySelectorAll('.slide-nav__link');
   const slidePage = document.querySelectorAll('.slide__item');
@@ -63,5 +63,3 @@ function initSlide() {
 
   initAutoSlide();
 }
-
-initSlide();
