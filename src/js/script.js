@@ -1,5 +1,5 @@
-import initAnimate from './modules/animate.js';
-initAnimate();
+import initAnimations from './modules/animate.js';
+initAnimations();
 
 import initHeaderScroll from './modules/headerScroll.js';
 initHeaderScroll();

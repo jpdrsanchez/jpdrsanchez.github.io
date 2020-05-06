@@ -1,12 +1,25 @@
-export default function initAnimate() {
-  const jsAnimate = document.querySelectorAll('.js-animate');
+export default function initAnimations() {
+  const animations = document.querySelectorAll('[data-animation]');
 
-  function animate() {
-    jsAnimate.forEach((item, index) => {
+  function animeItems() {
+    animations.forEach((item) => {
+      const time = item.dataset.animation;
       setTimeout(() => {
         item.classList.add('active');
-      }, 1000 * (index + 1));
+      }, time);
     });
   }
-  animate();
+
+  function visibility() {
+    if (typeof document.visibilityState !== "undefined") {
+      if (document.visibilityState === "visible") {
+        animeItems();
+      }
+    } else {
+      animeItems();
+    }
+  }
+  
+  animeItems();
+  document.addEventListener('visibilitychange', visibility);
 }
