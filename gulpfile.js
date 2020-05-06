@@ -94,4 +94,4 @@ exports.scss = scss;
 exports.js = js;
 exports.image = image;
 exports.watch = watchTask;
-exports.default = parallel(scss, js, image, watchTask);
+exports.default = parallel(scss, js, watchTask);
